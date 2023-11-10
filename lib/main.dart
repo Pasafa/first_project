@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: NinjaCard()
+    home: NinjaCard(),
   ));
 }
 
 class NinjaCard extends StatelessWidget {
-
+  const NinjaCard({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +25,16 @@ class NinjaCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/profile.jpg'),
+                radius: 40,
+              ),
+            ),
+            Divider(
+              height: 40,
+              color: Colors.white
+              ,),
             Text(
               'Name',
               style: TextStyle(
@@ -66,6 +76,8 @@ class NinjaCard extends StatelessWidget {
                 Icon(
                   Icons.email,
                   color:Colors.grey[400],
+                ),
+                SizedBox(width: 10,
                 ),
                 Text(
                   'nante@gmail.com',
